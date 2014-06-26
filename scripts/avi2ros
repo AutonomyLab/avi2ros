@@ -148,7 +148,7 @@ def main(args):
     #print help_message
 
     print "example usage:"
-    print "rosrun avi2ros avi2ros.py _input:=~/my_video.avi _loop:=True _headless:=True"
+    print "rosrun avi2ros avi2ros _input:=~/my_video.avi _loop:=True _headless:=True"
     print "publishes on topic /output"
     
     try:

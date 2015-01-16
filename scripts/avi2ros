@@ -69,6 +69,10 @@ class AVI2ROS:
         # Get the first frame to display if we are starting in the paused state.
         # TODO: Check return value
         ret, frame = video.read()
+        if not ret:
+            rospy.logfatal("Error reading frame from %s" % (self.input, ))
+            sys.exit(1)
+
         image_size = frame.shape[1::-1]
         if (len(frame.shape) > 2):
             image_channels = frame.shape[2]
